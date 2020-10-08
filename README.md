@@ -6,10 +6,10 @@ Selenium
 
 Scenario: Basic DuckDuckGo Search
     Given the DuckDuckGo home page is displayed
-    When the user searches for "home"
-    Then the search results title contains "home"
-    And the search result query is "home"
-    And the search result links pertain "home"
+    When the user searches for "panda"
+    Then the search results title contains "panda"
+    And the search result query is "panda"
+    And the search result links pertain "panda"
 
 
 # Running tests
