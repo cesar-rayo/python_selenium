@@ -4,13 +4,16 @@
 #    And the search result query is "home"
 #    And the search result links pertain "home"
 import pytest
+import logging
 from search import DuckDuckGoSearchPage
 from result import DuckDuckGoResultPage
 
+LOGGER = logging.getLogger(__name__)
 
 @pytest.mark.parametrize('phrase', ['panda', 'python', 'polar bear'])
 def test_basic_duckduckgo_search(web_browser, phrase):
     # driver comes from the web_browser fixture
+    LOGGER.info("Executing test")
     search_page = DuckDuckGoSearchPage(web_browser)
     result_page = DuckDuckGoResultPage(web_browser)
 
